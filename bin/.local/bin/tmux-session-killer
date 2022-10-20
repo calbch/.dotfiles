@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+session_name=$(tmux ls | fzf | cut -d \: -f 1)
+
+if tmux has-session -t "$session_name"; then
+  tmux kill-session -t "$session_name"
+  echo "Killed $session_name 🔪"
+else
+  echo "Something went wrong.. 🚔"
+fi

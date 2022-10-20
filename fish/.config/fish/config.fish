@@ -35,10 +35,11 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
-starship init fish | source
+# Keybindings
+bind \cs 'tmux-sessionizer'
+bind \ck 'tmux-session-killer'
 
-# Created by `pipx` on 2022-10-15 12:41:12
-set PATH $PATH /Users/cal/.local/bin
+starship init fish | source
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
