@@ -7,23 +7,7 @@ if not ready then
 end
 
 treesitter.setup {
-  ensure_installed = {
-    "comment",
-    "markdown",
-    "markdown_inline",
-    "json",
-    "json5",
-    "regex",
-    "yaml",
-    "fish",
-    "lua",
-    "css",
-    "scss",
-    "html",
-    "javascript",
-    "typescript",
-    "tsx",
-  },
+  ensure_installed = "all",
   sync_install = false,
   highlight = {
     enable = true,
