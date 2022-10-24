@@ -39,11 +39,8 @@ cursor:
 
 live_config_reload: true
 
-shell:
-  program: /opt/homebrew/bin/fish
-
-import:
-  - ~/.config/alacritty/tokyonight.yml
+#shell:
+#  program: /opt/homebrew/bin/fish
 
 tokyo-night: &tokyo-night # Default colors
   primary:
