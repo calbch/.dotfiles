@@ -27,7 +27,7 @@ font:
   bold_italic:
     family: MonoLisa Nerd Font
     style: Bold Italic
-  size: 12.0
+  size: 14.0
   draw_bold_text_with_bright_colors: false
 
 # When set to `true`, selected text will be copied to the primary clipboard.

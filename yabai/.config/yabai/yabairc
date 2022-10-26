@@ -40,7 +40,7 @@ yabai -m config mouse_drop_action            swap
 # general space settings
 yabai -m config layout                       bsp
 yabai -m config top_padding                  8
-yabai -m config bottom_padding               20
+yabai -m config bottom_padding               14
 yabai -m config left_padding                 8
 yabai -m config right_padding                8
 yabai -m config window_gap                   4
@@ -48,6 +48,5 @@ yabai -m config window_gap                   4
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
-yabai -m rule --add app="^SpaceLauncher$" manage=off
 
 echo "yabai configuration loaded.."

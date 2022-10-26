@@ -1,18 +1,17 @@
-# My . live here 🏡
-
-## Managed by [`.nixpkgs`](https://github.com/caldotdev/.nixpkgs)
-
-- [x] alacritty
-- [ ] bin
-- [ ] fish
-- [ ] kitty
-- [ ] nvim
-- [x] skhd
-- [x] starship
-- [x] tmux
-- [x] yabai
-- [x] zsh
+# My .'s live here 🏡
 
 ## Todo
 
 - [ ] fix `tmux-cht.sh` keybind
+
+## At some point *hopefully* managed by [`.nixpkgs`](https://github.com/caldotdev/.nixpkgs)
+- [ ] alacritty
+- [ ] bin
+- [ ] fish
+- [ ] kitty
+- [ ] nvim
+- [ ] skhd
+- [ ] starship
+- [ ] tmux
+- [ ] yabai
+- [ ] zsh
