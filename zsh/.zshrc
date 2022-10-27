@@ -60,6 +60,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export LANG=en_US.UTF-8
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ENV_HINTS=1
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -78,7 +80,7 @@ export LANG=en_US.UTF-8
 
 alias zshconfig="nvim ~/.zshrc"
 
-alias -g ls="exa -aF --group-directories-first --color=always --icons"
+alias -g ls="exa -F --group-directories-first --color=always --icons"
 alias -g la="exa -alF --group-directories-first --color=always --icons"
 alias -g ll="exa -lF --group-directories-first"
 alias -g lt="exa -aTF --level=2 --group-directories-first --icons --color=always"
