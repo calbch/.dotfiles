@@ -60,6 +60,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export LANG=en_US.UTF-8
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ENV_HINTS=1
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
