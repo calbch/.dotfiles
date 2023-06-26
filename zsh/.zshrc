@@ -78,7 +78,7 @@ export LANG=en_US.UTF-8
 
 alias zshconfig="nvim ~/.zshrc"
 
-alias -g ls="exa -aF --group-directories-first --color=always --icons"
+alias -g ls="exa -F --group-directories-first --color=always --icons"
 alias -g la="exa -alF --group-directories-first --color=always --icons"
 alias -g ll="exa -lF --group-directories-first"
 alias -g lt="exa -aTF --level=2 --group-directories-first --icons --color=always"
