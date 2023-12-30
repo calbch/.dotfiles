@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/rose-pine.toml"]
+import = ["~/.config/alacritty/rose-pine-moon.toml"]
 
 [window]
 decorations = "Buttonless"
