@@ -52,16 +52,19 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux zoxide)
+plugins=(git tmux zoxide poetry)
 
 source $ZSH/oh-my-zsh.sh
 #fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # User configuration
-
 export LANG=en_US.UTF-8
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
+
+# Set n install path - https://github.com/tj/n
+export N_PREFIX="$HOME/.n"
+export PATH=$N_PREFIX/bin:$PATH
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -69,6 +72,33 @@ export HOMEBREW_NO_ENV_HINTS=1
  else
    export EDITOR='nvim'
  fi
+
+# pnpm
+export PNPM_HOME="/Users/cal/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+# pyenv end
+
+# poetry
+export PATH="$HOME/.local/bin:$PATH"
+# poetry end
+
+# bun
+# completions
+[ -s "/Users/cal/.bun/_bun" ] && source "/Users/cal/.bun/_bun"
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# bun end
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -89,6 +119,14 @@ alias -g cat="bat"
 alias -g grep="egrep"
 
 alias g="git"
+alias gp="git push"
+alias gpf="git push --force"
+alias gst="git stash"
+alias gstp="git stash pop"
+alias gco="git checkout"
+alias grb="git rebase"
+alias gcan="git commit --amend --no-edit"
+
 alias lg="lazygit"
 
 alias cp="cp -i"
