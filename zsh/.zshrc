@@ -64,7 +64,7 @@ export HOMEBREW_NO_ENV_HINTS=1
 
 # Set n install path - https://github.com/tj/n
 export N_PREFIX="$HOME/.n"
-export PATH=$N_PREFIX/bin:$PATH
+export PATH="$N_PREFIX/bin:$PATH"
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -93,12 +93,16 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # bun
 # completions
-[ -s "/Users/cal/.bun/_bun" ] && source "/Users/cal/.bun/_bun"
+# [ -s "/Users/cal/.bun/_bun" ] && source "/Users/cal/.bun/_bun"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # bun end
 
+# go 
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
+# go end
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
