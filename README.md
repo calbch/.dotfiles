@@ -24,6 +24,13 @@ Here are some of the most important commands:
 
 Check out the [documentation](https://www.gnu.org/software/stow/manual/stow.html#Invoking-Stow), if you have a more advanced use-case.
 
+## Convenience
+
+You can also apply or delete all configurations using the makefile
+
+- `make all`
+- `make delete`
+
 ## Todo
 
 - [ ] create a minimal nvim config
