@@ -1,5 +1,5 @@
 all:
-	stow --verbose --target=$$HOME --restow */
+	stow --verbose --target=$$HOME --ignore='*.bak' --restow */
 
 delete:
 	@echo "Are you sure you want to delete the symlinks? [y/N] "; \
