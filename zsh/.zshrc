@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux zoxide poetry)
+plugins=(git tmux zoxide poetry kubectl)
 
 source $ZSH/oh-my-zsh.sh
 #fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -120,7 +120,7 @@ alias -g ll="exa -lF --group-directories-first"
 alias -g lt="exa -aTF --level=2 --group-directories-first --icons --color=always"
 alias -g ldot='exa -a | egrep "^\."'
 alias -g cat="bat"
-alias -g grep="egrep"
+alias -g grep="rg"
 
 alias g="git"
 alias gp="git push"
@@ -129,13 +129,17 @@ alias gpl="g pull"
 alias gpls="g pull --recurse-submodules"
 alias gst="git stash"
 alias gstp="git stash pop"
+alias gs="git switch"
+alias gsc="git switch -c"
 alias gco="git checkout"
 alias grb="git rebase"
 alias gcan="git commit --amend --no-edit"
-alias gprn="git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
+alias gprn="git fetch --all --prune && git branch -v | awk '/\[gone\]/ {print $1}' | xargs git branch -D"
 
 alias lg="lazygit"
+alias lzd="lazydocker"
 
+alias pn="pnpm"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
