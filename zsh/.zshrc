@@ -47,11 +47,8 @@ ZSH_THEME="robbyrussell"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux zoxide poetry kubectl)
 
 source $ZSH/oh-my-zsh.sh
@@ -99,26 +96,32 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # bun end
 
+# llvm
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+# llvm end
+
 # go 
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 # go end
 
+# zig
+export ZIGPATH="$HOME/Code/zig/build/stage3"
+export PATH="$ZIGPATH/bin:$PATH"
+# zig end
+
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
+# Aliases
 alias zshconfig="nvim ~/.zshrc"
 
-alias -g ls="exa -F --group-directories-first --color=always --icons"
-alias -g la="exa -alF --group-directories-first --color=always --icons"
-alias -g ll="exa -lF --group-directories-first"
-alias -g lt="exa -aTF --level=2 --group-directories-first --icons --color=always"
-alias -g ldot='exa -a | egrep "^\."'
+alias -g ls="eza -F --group-directories-first --color=always --icons"
+alias -g la="eza -alF --group-directories-first --color=always --icons"
+alias -g ll="eza -lF --group-directories-first"
+alias -g lt="eza -aTF --level=2 --group-directories-first --icons --color=always"
+alias -g ldot='eza -a | egrep "^\."'
 alias -g cat="bat"
 alias -g grep="rg"
 
@@ -134,14 +137,19 @@ alias gsc="git switch -c"
 alias gco="git checkout"
 alias grb="git rebase"
 alias gcan="git commit --amend --no-edit"
+# This does not work properly...
 alias gprn="git fetch --all --prune && git branch -v | awk '/\[gone\]/ {print $1}' | xargs git branch -D"
 
 alias lg="lazygit"
 alias lzd="lazydocker"
 
 alias pn="pnpm"
+
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
+
+alias theme="nvim +FormatDisable! +Lushify ~/Code/1980_sun/lua/lush_theme/1980_sun.lua"
+alias tinker="nvim ~/.config/nvim/"
 
 eval "$(starship init zsh)"
