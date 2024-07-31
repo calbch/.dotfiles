@@ -1,5 +1,3 @@
-import = ["~/.config/alacritty/rose-pine-moon.toml"]
-
 [window]
 decorations = "Buttonless"
 padding = { x = 12, y = 12 }
@@ -9,8 +7,16 @@ dynamic_title = true
 history = 80000
 
 [font]
-normal = { family = "MonoLisa Nerd Font", style = "Regular" }
-bold = { family = "MonoLisa Nerd Font", style = "Bold" }
-italic = { family = "MonoLisa Nerd Font", style = "Regular Italic" }
-bold_italic = { family = "MonoLisa Nerd Font", style = "Bold Italic" }
-size = 16
+normal = { family = "Berkeley Mono", style = "Regular" }
+bold = { family = "Berkeley Mono", style = "Bold" }
+italic = { family = "Berkeley Mono", style = "Regular Italic" }
+bold_italic = { family = "Berkeley Mono", style = "Bold Italic" }
+size = 14
+
+[colors.primary]
+foreground = "#D9D6DE"
+background = "#1C1C22"
+
+[colors.cursor]
+text = "#D9D6DE"
+cursor = "#DED5C8"
