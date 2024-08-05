@@ -115,8 +115,6 @@ export PATH="$ZIGPATH/bin:$PATH"
 # export ARCHFLAGS="-arch x86_64"
 
 # Aliases
-alias zshconfig="nvim ~/.zshrc"
-
 alias -g ls="eza -F --group-directories-first --color=always --icons"
 alias -g la="eza -alF --group-directories-first --color=always --icons"
 alias -g ll="eza -lF --group-directories-first"
@@ -150,6 +148,9 @@ alias mv="mv -i"
 alias rm="rm -i"
 
 alias theme="nvim +FormatDisable! +Lushify ~/Code/1980_sun/lua/lush_theme/1980_sun.lua"
-alias tinker="nvim ~/.config/nvim/"
+
+alias zshcfg="nvim ~/.zshrc"
+alias vimcfg="nvim ~/.config/nvim/"
+alias gstcfg="nvim .config/ghostty/config"
 
 eval "$(starship init zsh)"
